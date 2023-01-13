@@ -11,7 +11,6 @@ Sub kanikaniSample1()
     
     Dim INPUT_RANGE     As Range
     Dim CHECK_RANGE     As Range
-    Dim rg              As Range
     Dim last_row_num    As Long
     Dim last_column_num As Long
     Dim i               As Long
