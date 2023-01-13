@@ -2,8 +2,6 @@ Option Explicit
 
 'シート名
 Private Const SHEET_NAME      As String = "Sheet1"
-'白色
-Private Const WHITE           As Long = 16777215
 Private Const INPUT_RANGE_STR As String = "$C$3:$G$7"
 Private Const CHECK_RANGE_STR As String = "$C$10:$G$14"
 Private Const START_NUM       As Integer = 1
@@ -31,6 +29,7 @@ Sub kanikaniSample1()
                 If INPUT_RANGE.Cells(i, j).Interior.Color <> _
                     CHECK_RANGE.Cells(i, j).Interior.Color Then
                         .Cells(RECORD_ROW_NUM, j + Column_NUM).Value = "不一致"
+                        Exit For
                 End If
             Next j
         Next i
